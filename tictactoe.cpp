@@ -9,15 +9,12 @@ bool draw = false;
 
 void board_display(){
 
-    //Rander Game Board LAYOUT
 	cout<<endl;
     cout<<"PLAYER - 1 [X]  PLAYER - 2 [O]"<<endl;
     cout<<board[0][0]<<"  | "<<board[0][1]<<"  |  "<<board[0][2]<<endl;
     cout<<board[1][0]<<"  | "<<board[1][1]<<"  |  "<<board[1][2]<<endl;
     cout<<board[2][0]<<"  | "<<board[2][1]<<"  |  "<<board[2][2]<<endl;
 }
-
-//Function to get the player input and update the board
 
 void player_turn(){
     if(turn == 'X'){
@@ -58,8 +55,6 @@ void player_turn(){
    // board_display();
 }
 
-//Function to get the game status e.g. GAME WON, GAME DRAW GAME IN CONTINUE MODE
-
 bool gaming()
 {
     //checking the win for Simple Rows and Simple Column
@@ -82,7 +77,7 @@ bool gaming()
 	}
 	}
 
-    //Checking the if game already drawn
+    //Checking the if game is already drawn
     draw = true;
     return false;
 }
@@ -92,7 +87,7 @@ int main()
 {
     cout<<"T I C -- T A C -- T O E -- G A M E"<<endl;
     cout<<"THE GAME IS DESIGNED FOR 2 PLAYERS"<<endl;
-	   while(gaming()){
+	 while(gaming()){
         board_display();
         player_turn();
         gaming();
