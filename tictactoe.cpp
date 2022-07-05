@@ -9,11 +9,12 @@ bool draw = false;
 
 void board_display(){
 
-	cout<<endl;
+    cout<<endl<<endl;
     cout<<"PLAYER - 1 [X]  PLAYER - 2 [O]"<<endl;
     cout<<board[0][0]<<"  | "<<board[0][1]<<"  |  "<<board[0][2]<<endl;
     cout<<board[1][0]<<"  | "<<board[1][1]<<"  |  "<<board[1][2]<<endl;
     cout<<board[2][0]<<"  | "<<board[2][1]<<"  |  "<<board[2][2]<<endl;
+    cout<<endl;
 }
 
 void player_turn(){
